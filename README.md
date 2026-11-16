@@ -26,3 +26,12 @@ Dentro de esta VPC se ha configurado una subred pública llamada `libreria-publi
 También se ha creado un Internet Gateway llamado `libreria-igw` y se ha asociado a la VPC para permitir la comunicación con Internet.
 
 ![Internet Gateway](img/03-internet-gateway.png)
+
+Por último, se ha configurado una tabla de rutas llamada
+`libreria-rt-publica`, asociada a la subred pública.
+
+Esta tabla contiene una ruta local (`10.0.0.0/16`) para la
+comunicación dentro de la VPC y una ruta (`0.0.0.0/0`)
+hacia el Internet Gateway para permitir el acceso a Internet.
+
+![Tabla de rutas](img/06-tabla-rutas.png)
